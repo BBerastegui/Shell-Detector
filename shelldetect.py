@@ -100,7 +100,7 @@ class ShellDetector:
     #system: version of shell detector
     _version = '1.1'
     #system: regex for detect Suspicious behavior
-    _regex = r"(?si)(preg_replace.*\/e|`.*?\$.*?`|\bpassthru\b|\bshell_exec\b|\bexec\b|\bbase64_decode\b|\beval\b|\bsystem\b|\bproc_open\b|\bpopen\b|\bcurl_exec\b|\bcurl_multi_exec\b|\bparse_ini_file\b|\bshow_source\b)"
+    _regex = r"(?si)(preg_replace.*\/e|`.*?\$.*?`|passthru\s?\([',\"]?.*?[',\"]?\)|shell_exec\s?\([',\"]?.*?[',\"]?\)|escapeshellcmd\s?\([',\"]?.*?[',\"]?\)|exec\s?\([',\"]?.*?[',\"]?\)|base64_decode\s?\([',\"]?.*?[',\"]?\)|eval\s?\([',\"]?.*?[',\"]?\)|system\s?\([',\"]?.*?[',\"]?\)|proc_open\s?\([',\"]?.*?[',\"]?\)|popen\s?\([',\"]?.*?[',\"]?\)|curl_exec\s?\([',\"]?.*?[',\"]?\)|curl_multi_exec\s?\([',\"]?.*?[',\"]?\)|parse_ini_file\s?\([',\"]?.*?[',\"]?\)|show_source\s?\([',\"]?.*?[',\"]?\))" 
 
     def __init__(self, options):
         #set arguments
